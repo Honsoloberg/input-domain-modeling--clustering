@@ -46,6 +46,8 @@
         <groupId>net.sourceforge</groupId>
         <artifactId>javaml</artifactId>
         <version>0.1.7</version>
+        <scope>system</scope>
+        <systemPath>${env.JAVA_ML}\javaml-0.1.7.jar/</systemPath>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/gov.nist.math/jama -->
@@ -129,14 +131,14 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
-            <!-- <configuration>
+            <configuration>
               <archive>
                 <manifest>
                   <addClasspath>true</addClasspath>
                   <mainClass>com.butler.clustering.App</mainClass>
                 </manifest>
               </archive>
-            </configuration>  -->
+            </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
