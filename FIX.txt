@@ -1,0 +1,9 @@
+Command:
+mvn install:install-file -Dfile=<ajt jar path (in quotes)> -DgroupId="be.abeel" -DartifactId="ajt" -Dversion="2.9" -Dpackaging="jar" -DgeneratePom=true
+
+Dependency:
+<dependency>
+  <groupId>be.abeel</groupId>
+  <artifactId>ajt</artifactId>
+  <version>2.9</version
+</dependency>
