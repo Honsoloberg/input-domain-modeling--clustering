@@ -25,11 +25,11 @@
             <name>Custom Repository1</name>
             <url>https://bio.informatik.uni-jena.de/repository/libs-release-oss/</url>
         </repository>
-        <repository>
+        <!-- <repository>
             <id>ajt-repo</id>
             <name>Custom Repository2</name>
             <url>http://neuroph.sourceforge.net/maven2/</url>
-        </repository>
+        </repository> -->
     </repositories>
 
   <dependencies>
@@ -41,14 +41,23 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/net.sourceforge/javaml -->
+    <!-- https://mvnrepository.com/artifact/net.sourceforge/javaml
     <dependency>
         <groupId>net.sourceforge</groupId>
         <artifactId>javaml</artifactId>
         <version>0.1.7</version>
         <scope>system</scope>
         <systemPath>${env.JAVA_ML}\javaml-0.1.7.jar/</systemPath>
+    </dependency> -->
+
+    <!-- https://mvnrepository.com/artifact/net.sourceforge/javaml -->
+    <dependency>
+      <groupId>net.sourceforge</groupId>
+      <artifactId>javaml</artifactId>
+      <version>0.1.7</version>
     </dependency>
+
+
 
     <!-- https://mvnrepository.com/artifact/gov.nist.math/jama -->
     <dependency>
@@ -87,11 +96,9 @@
     </dependency>
 
     <dependency>
-      <groupId>ajt</groupId>
+      <groupId>be.abeel</groupId>
       <artifactId>ajt</artifactId>
       <version>2.9</version>
-      <scope>system</scope>
-      <systemPath>${env.JAVA_ML}/lib/ajt-2.9.jar</systemPath>
     </dependency>
 
   </dependencies>
@@ -166,34 +173,13 @@
             </configuration>
         </plugin>
 
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-shade-plugin</artifactId>
-            <version>3.2.4</version>
-            <configuration>
-                <transformers>
-                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                        <mainClass>com.butler.clustering.App</mainClass>
-                    </transformer>
-                </transformers>
-            </configuration>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>shade</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-
         <plugin>
           <artifactId>maven-assembly-plugin</artifactId>
           <configuration>
             <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.butler.clustering.Appp</mainClass>
+              <mainClass>com.butler.clustering.App</mainClass>
             </manifest>
             </archive>
             <descriptorRefs>

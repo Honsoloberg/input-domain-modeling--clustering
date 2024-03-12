@@ -38,5 +38,10 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="C:\Users\Logan\Desktop\School\Software Quality\Java_ML\javaml-0.1.7\lib\ajt-2.9.jar" output="target/classes">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
