@@ -94,7 +94,7 @@ public class App
         }
         
         System.out.println("\n--------------------------------------------------------------------------------------------\n");
-        System.out.println("\t\t\tKMean\t\tAQBC\t\tDBSC");
+        System.out.println("\t\t\tKMean\t\tAQBC\t\tDBSS");
         System.out.printf("Cluster Count: \t\t" + "%d" + "\t\t" + "%d" + "\t\t" + "%d\n", method1.length, method1.length, method1.length);
         System.out.printf("AIC Score: \t\t" + "%.2f" + "\t\t" + "%.2f" + "\t\t" + "%.2f\n", aicScore[0], aicScore[1], aicScore[2]);
         System.out.printf("BIC Score: \t\t" + "%.2f" + "\t\t" + "%.2f" + "\t\t" + "%.2f\n", bicScore[0], bicScore[1], bicScore[2]);
